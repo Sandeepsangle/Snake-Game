@@ -17,7 +17,7 @@ high_score = 0
 
 wn = turtle.Screen()
 wn.title("snake game:")
-wn.bgcolor("green")
+wn.bgcolor("blue")
 wn.setup(width=600,height=600)
 wn.tracer(0) #turns off the screen updates
 
@@ -50,8 +50,7 @@ pen.penup()
 pen.goto(0,0)
 pen.hideturtle()
 pen.goto(0,260)
-pen.write("score : 0 high Score : 0 ",align ="center",font = ("Courier",24,"normal"))
-
+pen.write("score : 0 high Score : 0 \n Use Arrow key to Move",align ="center",font = ("Courier",24,"normal"))
 #step 3: creating functions to assign keyboard to move head
 def go_up():
     if head.direction != "down": # step 7: now if will stop going in opposite direction 
@@ -86,11 +85,15 @@ def move():
 # keyborad bindings - connect keyboard to function
 
 wn.listen()
-wn.onkeypress(go_up,"w")
-wn.onkeypress(go_right,"d")
-wn.onkeypress(go_down,"x")
-wn.onkeypress(go_left,"a")
+wn.onkeypress(go_up,"Up")
+wn.onkeypress(go_right,"Right")
+wn.onkeypress(go_down,"Down")
+wn.onkeypress(go_left,"Left")
 
+# wn.onkeypress(go_up,"w")
+# wn.onkeypress(go_right,"d")
+# wn.onkeypress(go_down,"x")
+# wn.onkeypress(go_left,"a")
         
 
 
